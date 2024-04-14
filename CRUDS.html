@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <title>CRUDS</title>
+</head>
+<body class="bg-dark">
+    <div class="text-center m-3">
+        <h1 style="color: aliceblue;">CRUDS</h1>
+    </div>
+    <div class="container inputs">
+
+        <div class="input-group">
+            <input type="text" class="form-control " placeholder="prodect name" id="prodect-name">
+          </div>
+
+          <div class="input-group d-flex mt-3">
+             <input type="number"  class="form-control ml-2" placeholder="price $" id="price" onkeyup="gettotale()" >
+              <input type="number"  class="form-control ml-2" placeholder="ads $" id="ads" onkeyup="gettotale()" >
+               <input type="number"  class="form-control ml-2" placeholder="tax %" id="tax" onkeyup="gettotale()" >
+                <input type="number"  class="form-control ml-2" placeholder="promotion %" id="promotion" onkeyup="gettotale()" >
+                <span class="ml-2 p-1 bg-danger" style="color: aliceblue;" id="totale" >totale :</span>
+
+          </div>
+
+          <div class="m-3"><!--category input-->
+            <input type="text" class="form-control" placeholder="category prodect" id="category">
+        </div> 
+        <div><!--create multiple prodect-->
+            <input type="text" class="form-control" placeholder="multiple prodect" id="multiple-prodect">
+        </div>
+
+        <div class="m-3"><!--a button CREAT-->
+            <button onclick="clearinputs()" type="button" class="btn btn-primary btn-lg btn-block" id="creat"> CREAT </button>
+        </div>
+
+
+        <!--creat two inputs search category and search name-->
+        <div class="m-3 d-flex">
+            <div class="ml-2"> <input onkeyup="searchbyCategory(this.value)" type="text" class="form-control" placeholder="search by category" id="searchbycategory"> </div>
+            <div class="ml-5"> <input onkeyup="searchbyName(this.value)" type="text" class="form-control" placeholder="search by name" id="searchbyname"> </div>
+        </div>
+
+        <!--button deleteall-->
+        <div class="m-2" id="deleteall">
+
+        </div>
+
+        <!--creat a table-->
+        <div class="container mt-5 table">
+            <table class="table" id="idtable" >
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">category</th>
+                        <th scope="col">prodect name</th>
+                        <th scope="col">price</th>
+                        <th scope="col">ads</th>
+                        <th scope="col">tax %</th>
+                        <th scope="col">promotion %</th>
+                        <th scope="col">totale</th>
+                        <th scope="col">Update</th>
+                        <th scope="col">Delete</th>
+                        
+                    
+                    </tr>
+
+                </thead>
+                
+            <tbody id="tbody">
+               
+            </tbody>
+
+            </table>
+        </div>
+
+
+
+
+
+    </div>
+    <script src="CRUDS.js"></script>
+</body>
+</html>
